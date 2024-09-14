@@ -20,8 +20,8 @@ public class SpringCloudConfiguration {
                 .route("swagger-ui", r -> r.path("/dimiourgia/swagger-ui/**").uri("lb://dimiourgia"))
 				.route("swagger-resources", r -> r.path("/dimiourgia/swagger-resources/**").uri("lb://dimiourgia"))
 				.route("v3", r -> r.path("/dimiourgia/v3/**").uri("lb://dimiourgia"))
-                .route("user", r -> r.path("/user/**").uri("lb://dimiourgia"))
-                .route("auth", r -> r.path("/auth/**").uri("lb://dimiourgia"))
+                .route("user", r -> r.path("/dimiourgia/api/user/**").uri("lb://dimiourgia"))
+                .route("auth", r -> r.path("/dimiourgia/api/auth/**").uri("lb://dimiourgia"))
                 .build();
     }
 }
