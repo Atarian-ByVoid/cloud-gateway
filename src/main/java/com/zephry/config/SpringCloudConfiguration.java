@@ -22,6 +22,8 @@ public class SpringCloudConfiguration {
 				.route("v3", r -> r.path("/dimiourgia/v3/**").uri("lb://dimiourgia"))
                 .route("user", r -> r.path("/dimiourgia/api/user/**").uri("lb://dimiourgia"))
                 .route("auth", r -> r.path("/dimiourgia/api/auth/**").uri("lb://dimiourgia"))
+                .route("integration", r -> r.path("/dimiourgia/api/integration/**").uri("lb://dimiourgia"))
+
                 .build();
     }
 }
